@@ -326,14 +326,14 @@ func (re *RedditEngine) sendDirectMessage(fromUsername, toUsername, content stri
 	toUser, exists := re.users[toUsername]
 	if !exists {
 		fmt.Printf("No such recipient with username %s\n", toUsername)
-		context.Respond(301)
+		context.Respond(302)
 		return
 	}
 	fromUser, exists := re.users[fromUsername]
 
-	if !exists {
+	if !exists && fromUser == nil {
 		fmt.Printf("No such sender with username %s\n", fromUsername)
-		context.Respond(302)
+		context.Respond(301)
 		return
 	}
 
