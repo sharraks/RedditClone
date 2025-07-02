@@ -33,8 +33,8 @@ The backend uses **ProtoActor** (an actor model framework for Go) to manage inte
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/RedditAPI.git
-cd RedditAPI
+git clone https://github.com/sharraks/RedditClone.git
+cd RedditClone
 ```
 ## Run app
 
